@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    // Mark: - Properties
+    
+    // Mark: - Methods
+    
+    // Mark: - View
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                HStack(spacing: 0) {
+                    AppCellView()
+                    AppCellView()
+                    AppCellView()
+                }
+            }
+            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+            .navigationTitle("Apps")
+        }
     }
 }
 
