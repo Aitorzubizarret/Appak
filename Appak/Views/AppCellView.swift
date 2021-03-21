@@ -12,8 +12,8 @@ struct AppCellView: View {
     // Mark: - Properties
     
     private var cellSize: CGSize {
-        let screenWidth: CGFloat = UIScreen.main.bounds.width - 50
-        let cellSize: CGSize = CGSize(width: screenWidth / 3, height: 110)
+        let screenWidth: CGFloat = UIScreen.main.bounds.width - 40
+        let cellSize: CGSize = CGSize(width: screenWidth / 4, height: 110)
         return cellSize
     }
     

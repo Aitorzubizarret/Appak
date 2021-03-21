@@ -18,14 +18,16 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                HStack(spacing: 0) {
+                ListHeaderView()
+                HStack(spacing: 8) {
+                    AppCellView()
                     AppCellView()
                     AppCellView()
                     AppCellView()
                 }
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-            .navigationTitle("Apps")
+            .navigationBarTitle("Appak", displayMode: .inline)
         }
     }
 }
