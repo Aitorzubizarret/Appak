@@ -13,6 +13,7 @@
 		42684A3826053D67001C1247 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42684A3726053D67001C1247 /* MainView.swift */; };
 		42684A3C2605440C001C1247 /* AppCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42684A3B2605440C001C1247 /* AppCellView.swift */; };
 		426A42F6260783CB00C6B3C7 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A42F5260783CB00C6B3C7 /* ListHeaderView.swift */; };
+		429A9E272607CB9300486793 /* PhoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429A9E262607CB9300486793 /* PhoneApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		42684A3726053D67001C1247 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		42684A3B2605440C001C1247 /* AppCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCellView.swift; sourceTree = "<group>"; };
 		426A42F5260783CB00C6B3C7 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
+		429A9E262607CB9300486793 /* PhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		42684A3126053D40001C1247 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				429A9E262607CB9300486793 /* PhoneApp.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				42684A3826053D67001C1247 /* MainView.swift in Sources */,
 				42684A202605392A001C1247 /* AppakApp.swift in Sources */,
+				429A9E272607CB9300486793 /* PhoneApp.swift in Sources */,
 				42684A3C2605440C001C1247 /* AppCellView.swift in Sources */,
 				426A42F6260783CB00C6B3C7 /* ListHeaderView.swift in Sources */,
 			);

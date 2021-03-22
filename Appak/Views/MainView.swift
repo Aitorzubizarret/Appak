@@ -11,7 +11,32 @@ struct MainView: View {
     
     // Mark: - Properties
     
+    var favouriteApps: [PhoneApp] = []
+    
     // Mark: - Methods
+    
+    init() {
+        self.addDemoData()
+    }
+    
+    
+    ///
+    /// Adds demo data.
+    ///
+    private mutating func addDemoData() {
+        let firstApp: PhoneApp = PhoneApp(icon: Image("applicationIcon"),
+                                          name: "Whatsapp",
+                                          urlString: "https://apps.apple.com/es/app/whatsapp-messenger/id310633997")
+        let secondApp: PhoneApp = PhoneApp(icon: Image("applicationIcon"),
+                                           name: "Signal",
+                                           urlString: "https://apps.apple.com/es/app/signal-private-messenger/id874139669")
+        let thirdApp: PhoneApp = PhoneApp(icon: Image("applicationIcon"),
+                                          name: "Whatsapp",
+                                          urlString: "https://apps.apple.com/es/app/whatsapp-messenger/id310633997")
+        self.favouriteApps.append(firstApp)
+        self.favouriteApps.append(secondApp)
+        self.favouriteApps.append(thirdApp)
+    }
     
     // Mark: - View
     
@@ -19,15 +44,12 @@ struct MainView: View {
         NavigationView {
             ScrollView {
                 ListHeaderView()
-                HStack(spacing: 8) {
-                    AppCellView()
-                    AppCellView()
-                    AppCellView()
+                ForEach(self.favouriteApps, id:\.id) { phoneApp in
                     AppCellView()
                 }
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-            .navigationBarTitle("Appak", displayMode: .inline)
+            .navigationBarTitle("Appak", displayMode: .automatic)
         }
     }
 }
