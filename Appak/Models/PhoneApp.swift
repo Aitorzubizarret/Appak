@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PhoneApp {
     let id: UUID = UUID()
-    let icon: Image
+    let icon: String
     let name: String
     let urlString: String
 }

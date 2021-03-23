@@ -24,13 +24,13 @@ struct MainView: View {
     /// Adds demo data.
     ///
     private mutating func addDemoData() {
-        let firstApp: PhoneApp = PhoneApp(icon: Image("applicationIcon"),
+        let firstApp: PhoneApp = PhoneApp(icon: "applicationIcon",
                                           name: "Whatsapp",
                                           urlString: "https://apps.apple.com/es/app/whatsapp-messenger/id310633997")
-        let secondApp: PhoneApp = PhoneApp(icon: Image("applicationIcon"),
+        let secondApp: PhoneApp = PhoneApp(icon: "applicationIcon",
                                            name: "Signal",
                                            urlString: "https://apps.apple.com/es/app/signal-private-messenger/id874139669")
-        let thirdApp: PhoneApp = PhoneApp(icon: Image("applicationIcon"),
+        let thirdApp: PhoneApp = PhoneApp(icon: "applicationIcon",
                                           name: "Whatsapp",
                                           urlString: "https://apps.apple.com/es/app/whatsapp-messenger/id310633997")
         self.favouriteApps.append(firstApp)
@@ -45,7 +45,7 @@ struct MainView: View {
             ScrollView {
                 ListHeaderView()
                 ForEach(self.favouriteApps, id:\.id) { phoneApp in
-                    AppCellView()
+                    AppCellView(phoneApp: phoneApp)
                 }
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))

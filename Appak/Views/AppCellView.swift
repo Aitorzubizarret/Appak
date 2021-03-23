@@ -9,26 +9,31 @@ import SwiftUI
 
 struct AppCellView: View {
     
-    // Mark: - Properties
+    // MARK: - Properties
     
     private var cellSize: CGSize {
         let screenWidth: CGFloat = UIScreen.main.bounds.width - 40
         let cellSize: CGSize = CGSize(width: screenWidth / 4, height: 110)
         return cellSize
     }
+    var phoneApp: PhoneApp
     
-    // Mark: - Methods
+    // MARK: - Methods
     
-    // Mark: - View
+    init(phoneApp: PhoneApp) {
+        self.phoneApp = phoneApp
+    }
+    
+    // MARK: - View
     
     var body: some View {
         VStack{
-            Image("applicationIcon")
+            Image(self.phoneApp.icon)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 80, height: 80, alignment: .center)
                 .cornerRadius(14)
-            Text("Messenger")
+            Text(self.phoneApp.name)
                 .font(Font.system(size: 13, weight: .light, design: .default))
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 0))
         }
@@ -38,7 +43,7 @@ struct AppCellView: View {
 
 struct AppCellView_Previews: PreviewProvider {
     static var previews: some View {
-        AppCellView()
+        AppCellView(phoneApp: PhoneApp(icon: "applicationIcon", name: "App", urlString: ""))
             .previewLayout(.sizeThatFits)
     }
 }
