@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ListHeaderView: View {
     
-    // Mark: - Properties
+    // MARK: - Properties
     
-    // Mark: - Methods
+    // MARK: - Methods
     
-    // Mark: - View
+    // MARK: - View
     
     var body: some View {
         HStack {

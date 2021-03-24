@@ -60,8 +60,8 @@
 			children = (
 				42684A1F2605392A001C1247 /* AppakApp.swift */,
 				42684A3126053D40001C1247 /* Models */,
+				42AB16A7260BF8170023BCF9 /* ViewModels */,
 				42684A3026053D34001C1247 /* Views */,
-				42684A2F26053D2B001C1247 /* Controllers */,
 				42684A232605392B001C1247 /* Assets.xcassets */,
 				42684A282605392B001C1247 /* Info.plist */,
 				42684A252605392B001C1247 /* Preview Content */,
@@ -75,13 +75,6 @@
 				42684A262605392B001C1247 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		42684A2F26053D2B001C1247 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		42684A3026053D34001C1247 /* Views */ = {
@@ -100,6 +93,13 @@
 				429A9E262607CB9300486793 /* PhoneApp.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		42AB16A7260BF8170023BCF9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

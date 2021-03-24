@@ -9,11 +9,11 @@ import SwiftUI
 
 struct MainView: View {
     
-    // Mark: - Properties
+    // MARK: - Properties
     
     var favouriteApps: [PhoneApp] = []
     
-    // Mark: - Methods
+    // MARK: - Methods
     
     init() {
         self.addDemoData()
@@ -38,7 +38,7 @@ struct MainView: View {
         self.favouriteApps.append(thirdApp)
     }
     
-    // Mark: - View
+    // MARK: - View
     
     var body: some View {
         NavigationView {
