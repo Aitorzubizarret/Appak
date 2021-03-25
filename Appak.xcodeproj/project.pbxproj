@@ -25,6 +25,7 @@
 		42684A3726053D67001C1247 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		42684A3B2605440C001C1247 /* AppCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCellView.swift; sourceTree = "<group>"; };
 		426A42F5260783CB00C6B3C7 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
+		427E11EA260D4B0700493CC4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		429A9E262607CB9300486793 /* PhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +43,7 @@
 		42684A132605392A001C1247 = {
 			isa = PBXGroup;
 			children = (
+				427E11EA260D4B0700493CC4 /* README.md */,
 				42684A1E2605392A001C1247 /* Appak */,
 				42684A1D2605392A001C1247 /* Products */,
 			);
