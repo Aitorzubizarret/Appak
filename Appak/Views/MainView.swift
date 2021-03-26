@@ -31,8 +31,8 @@ struct MainView: View {
                                            name: "Signal",
                                            urlString: "https://apps.apple.com/es/app/signal-private-messenger/id874139669")
         let thirdApp: PhoneApp = PhoneApp(icon: "applicationIcon",
-                                          name: "Whatsapp",
-                                          urlString: "https://apps.apple.com/es/app/whatsapp-messenger/id310633997")
+                                          name: "Telegram",
+                                          urlString: "https://apps.apple.com/es/app/telegram-messenger/id686449807")
         self.favouriteApps.append(firstApp)
         self.favouriteApps.append(secondApp)
         self.favouriteApps.append(thirdApp)
