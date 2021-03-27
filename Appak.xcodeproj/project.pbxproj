@@ -13,6 +13,7 @@
 		42684A3826053D67001C1247 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42684A3726053D67001C1247 /* MainView.swift */; };
 		42684A3C2605440C001C1247 /* AppCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42684A3B2605440C001C1247 /* AppCellView.swift */; };
 		426A42F6260783CB00C6B3C7 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A42F5260783CB00C6B3C7 /* ListHeaderView.swift */; };
+		427AEA7E260FD5C200971BBC /* PhoneAppsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427AEA7D260FD5C200971BBC /* PhoneAppsViewModel.swift */; };
 		429A9E272607CB9300486793 /* PhoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429A9E262607CB9300486793 /* PhoneApp.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		42684A3726053D67001C1247 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		42684A3B2605440C001C1247 /* AppCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCellView.swift; sourceTree = "<group>"; };
 		426A42F5260783CB00C6B3C7 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
+		427AEA7D260FD5C200971BBC /* PhoneAppsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAppsViewModel.swift; sourceTree = "<group>"; };
 		427E11EA260D4B0700493CC4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		429A9E262607CB9300486793 /* PhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 		42AB16A7260BF8170023BCF9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				427AEA7D260FD5C200971BBC /* PhoneAppsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				429A9E272607CB9300486793 /* PhoneApp.swift in Sources */,
 				42684A3C2605440C001C1247 /* AppCellView.swift in Sources */,
 				426A42F6260783CB00C6B3C7 /* ListHeaderView.swift in Sources */,
+				427AEA7E260FD5C200971BBC /* PhoneAppsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

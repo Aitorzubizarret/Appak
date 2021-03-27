@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct AppakApp: App {
+    
+    // MARK: - Properties
+    
+    var phoneAppsViewModel = PhoneAppsViewModel()
+    
+    // MARK: - View
+    
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView().environmentObject(self.phoneAppsViewModel)
         }
     }
 }
