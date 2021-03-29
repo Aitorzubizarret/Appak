@@ -18,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		421EB906261281B700F59C9D /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		42684A1C2605392A001C1247 /* Appak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42684A1F2605392A001C1247 /* AppakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppakApp.swift; sourceTree = "<group>"; };
 		42684A232605392B001C1247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +46,7 @@
 		42684A132605392A001C1247 = {
 			isa = PBXGroup;
 			children = (
+				421EB906261281B700F59C9D /* LICENSE.md */,
 				427E11EA260D4B0700493CC4 /* README.md */,
 				42684A1E2605392A001C1247 /* Appak */,
 				42684A1D2605392A001C1247 /* Products */,
