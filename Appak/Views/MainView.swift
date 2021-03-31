@@ -35,7 +35,9 @@ struct MainView: View {
 }
 
 struct MainView_Previews: PreviewProvider {
+    static let phoneAppsViewModel = PhoneAppsViewModel()
+    
     static var previews: some View {
-        MainView()
+        MainView().environmentObject(phoneAppsViewModel)
     }
 }
