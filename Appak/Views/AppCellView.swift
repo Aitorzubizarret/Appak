@@ -43,7 +43,7 @@ struct AppCellView: View {
 
 struct AppCellView_Previews: PreviewProvider {
     static var previews: some View {
-        AppCellView(phoneApp: PhoneApp(icon: "applicationIcon", name: "App", urlString: ""))
+        AppCellView(phoneApp: PhoneApp())
             .previewLayout(.sizeThatFits)
     }
 }

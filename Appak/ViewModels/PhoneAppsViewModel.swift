@@ -6,40 +6,58 @@
 //
 
 import Foundation
+import SwiftUI
+import CoreData
 
 class PhoneAppsViewModel: ObservableObject {
     
     // MARK: - Properties
     
     @Published var phoneApps: [PhoneApp] = []
+    let persistenceController = PersistenceController.shared
+    private var moc: NSManagedObjectContext
     
     // MARK: - Methods
     
     init() {
+        // Get the MOC (Managed Object Context).
+        self.moc = self.persistenceController.container.viewContext
+        
+        //self.saveDemoPhoneApps()
         self.getPhoneApps()
     }
     
     ///
-    /// Get PhoneApps and save them in the property "phoneApps".
+    /// Get PhoneApps from Core Data and save them in the property "phoneApps".
     ///
     private func getPhoneApps() {
-        // First PhoneApp
-        let firstApp: PhoneApp = PhoneApp(icon: "applicationIcon",
-                                          name: "Whatsapp",
-                                          urlString: "https://apps.apple.com/es/app/whatsapp-messenger/id310633997")
+        let request = PhoneApp.fetchRequest()
         
-        // Second PhoneApp
-        let secondApp: PhoneApp = PhoneApp(icon: "applicationIcon",
-                                           name: "Signal",
-                                           urlString: "https://apps.apple.com/es/app/signal-private-messenger/id874139669")
+        do {
+            var fetchedPhoneApps: [PhoneApp] = []
+            fetchedPhoneApps = try self.moc.fetch(request) as! [PhoneApp]
+            
+            self.phoneApps = fetchedPhoneApps
+        } catch let error {
+            print("VM getPhoneApps Error: \(error)")
+        }
+    }
+    
+    ///
+    /// Create a Demo PhoneApps and save it in CoreData.
+    ///
+    private func saveDemoPhoneApps() {
+        // Create new PhoneApp object.
+        let newPhoneApp: PhoneApp = PhoneApp(context: self.moc)
+        newPhoneApp.id = UUID()
+        newPhoneApp.icon = "applicationIcon"
+        newPhoneApp.name = "Signal"
+        newPhoneApp.urlString = "https://apps.apple.com/es/app/signal-private-messenger/id874139669"
         
-        // Third PhoneApp
-        let thirdApp: PhoneApp = PhoneApp(icon: "applicationIcon",
-                                          name: "Telegram",
-                                          urlString: "https://apps.apple.com/es/app/telegram-messenger/id686449807")
-        
-        self.phoneApps.append(firstApp)
-        self.phoneApps.append(secondApp)
-        self.phoneApps.append(thirdApp)
+        do {
+            try self.moc.save()
+        } catch let error {
+            print("VM saveDemoPhoneApps error: \(error.localizedDescription)")
+        }
     }
 }

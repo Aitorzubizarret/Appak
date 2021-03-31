@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421EB90926128F7F00F59C9D /* PhoneApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 421EB90726128F7F00F59C9D /* PhoneApp.xcdatamodeld */; };
+		4248EF912613DA6100A46E3C /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248EF902613DA6100A46E3C /* PersistenceController.swift */; };
 		42684A202605392A001C1247 /* AppakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42684A1F2605392A001C1247 /* AppakApp.swift */; };
 		42684A242605392B001C1247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42684A232605392B001C1247 /* Assets.xcassets */; };
 		42684A272605392B001C1247 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42684A262605392B001C1247 /* Preview Assets.xcassets */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		421EB906261281B700F59C9D /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		421EB90826128F7F00F59C9D /* PhoneApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhoneApp.xcdatamodel; sourceTree = "<group>"; };
+		4248EF902613DA6100A46E3C /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		42684A1C2605392A001C1247 /* Appak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42684A1F2605392A001C1247 /* AppakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppakApp.swift; sourceTree = "<group>"; };
 		42684A232605392B001C1247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4248EF8F2613DA5100A46E3C /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				4248EF902613DA6100A46E3C /* PersistenceController.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		42684A132605392A001C1247 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +79,7 @@
 				42684A1F2605392A001C1247 /* AppakApp.swift */,
 				42684A3126053D40001C1247 /* Models */,
 				42AB16A7260BF8170023BCF9 /* ViewModels */,
+				4248EF8F2613DA5100A46E3C /* Persistence */,
 				42684A3026053D34001C1247 /* Views */,
 				42684A232605392B001C1247 /* Assets.xcassets */,
 				42684A282605392B001C1247 /* Info.plist */,
@@ -97,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				429A9E262607CB9300486793 /* PhoneApp.swift */,
+				421EB90726128F7F00F59C9D /* PhoneApp.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,12 +192,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				421EB90926128F7F00F59C9D /* PhoneApp.xcdatamodeld in Sources */,
 				42684A3826053D67001C1247 /* MainView.swift in Sources */,
 				42684A202605392A001C1247 /* AppakApp.swift in Sources */,
 				429A9E272607CB9300486793 /* PhoneApp.swift in Sources */,
 				42684A3C2605440C001C1247 /* AppCellView.swift in Sources */,
 				426A42F6260783CB00C6B3C7 /* ListHeaderView.swift in Sources */,
 				427AEA7E260FD5C200971BBC /* PhoneAppsViewModel.swift in Sources */,
+				4248EF912613DA6100A46E3C /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +388,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		421EB90726128F7F00F59C9D /* PhoneApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				421EB90826128F7F00F59C9D /* PhoneApp.xcdatamodel */,
+			);
+			currentVersion = 421EB90826128F7F00F59C9D /* PhoneApp.xcdatamodel */;
+			path = PhoneApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 42684A142605392A001C1247 /* Project object */;
 }

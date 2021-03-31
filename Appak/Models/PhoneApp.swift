@@ -5,11 +5,11 @@
 //  Created by Aitor Zubizarreta Perez on 21/03/2021.
 //
 
-import SwiftUI
+import CoreData
 
-struct PhoneApp {
-    let id: UUID = UUID()
-    let icon: String
-    let name: String
-    let urlString: String
+class PhoneApp: NSManagedObject {
+    @NSManaged var id: UUID
+    @NSManaged var icon: String
+    @NSManaged var name: String
+    @NSManaged var urlString: String
 }
