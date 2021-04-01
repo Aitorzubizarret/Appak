@@ -17,6 +17,7 @@
 		426A42F6260783CB00C6B3C7 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A42F5260783CB00C6B3C7 /* ListHeaderView.swift */; };
 		427AEA7E260FD5C200971BBC /* PhoneAppsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427AEA7D260FD5C200971BBC /* PhoneAppsViewModel.swift */; };
 		429A9E272607CB9300486793 /* PhoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429A9E262607CB9300486793 /* PhoneApp.swift */; };
+		42E6969A261605370029AAB9 /* PhoneAppDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E69699261605370029AAB9 /* PhoneAppDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		427AEA7D260FD5C200971BBC /* PhoneAppsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAppsViewModel.swift; sourceTree = "<group>"; };
 		427E11EA260D4B0700493CC4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		429A9E262607CB9300486793 /* PhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneApp.swift; sourceTree = "<group>"; };
+		42E69699261605370029AAB9 /* PhoneAppDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAppDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				42684A3726053D67001C1247 /* MainView.swift */,
 				42684A3B2605440C001C1247 /* AppCellView.swift */,
 				426A42F5260783CB00C6B3C7 /* ListHeaderView.swift */,
+				42E69699261605370029AAB9 /* PhoneAppDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E6969A261605370029AAB9 /* PhoneAppDetailView.swift in Sources */,
 				421EB90926128F7F00F59C9D /* PhoneApp.xcdatamodeld in Sources */,
 				42684A3826053D67001C1247 /* MainView.swift in Sources */,
 				42684A202605392A001C1247 /* AppakApp.swift in Sources */,

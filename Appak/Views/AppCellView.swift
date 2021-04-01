@@ -27,17 +27,19 @@ struct AppCellView: View {
     // MARK: - View
     
     var body: some View {
-        VStack{
-            Image(self.phoneApp.icon)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 80, height: 80, alignment: .center)
-                .cornerRadius(14)
-            Text(self.phoneApp.name)
-                .font(Font.system(size: 13, weight: .light, design: .default))
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 0))
+        NavigationLink(destination: PhoneAppDetailView()) {
+            VStack{
+                Image(self.phoneApp.icon)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 80, height: 80, alignment: .center)
+                    .cornerRadius(14)
+                Text(self.phoneApp.name)
+                    .font(Font.system(size: 13, weight: .light, design: .default))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 0))
+            }
+            .frame(width: cellSize.width, height: cellSize.height, alignment: .center)
         }
-        .frame(width: cellSize.width, height: cellSize.height, alignment: .center)
     }
 }
 
