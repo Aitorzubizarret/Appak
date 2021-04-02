@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AppCellView: View {
+struct PhoneAppCellView: View {
     
     // MARK: - Properties
     
@@ -43,7 +43,7 @@ struct AppCellView: View {
     }
 }
 
-struct AppCellView_Previews: PreviewProvider {
+struct PhoneAppCellView_Previews: PreviewProvider {
     static var previews: some View {
         let context = PersistenceController.shared.container.viewContext
         let phoneApp: PhoneApp = PhoneApp(context: context)
@@ -51,7 +51,7 @@ struct AppCellView_Previews: PreviewProvider {
         phoneApp.icon = "applicationIcon"
         phoneApp.urlString = ""
         
-        return AppCellView(phoneApp: phoneApp)
+        return PhoneAppCellView(phoneApp: phoneApp)
             .previewLayout(.sizeThatFits)
     }
 }
