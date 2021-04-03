@@ -10,6 +10,9 @@
 		421EB90926128F7F00F59C9D /* PhoneApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 421EB90726128F7F00F59C9D /* PhoneApp.xcdatamodeld */; };
 		4248EF912613DA6100A46E3C /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248EF902613DA6100A46E3C /* PersistenceController.swift */; };
 		425CB5D72617AF5800488F2F /* PhoneAppCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425CB5D62617AF5800488F2F /* PhoneAppCreateView.swift */; };
+		425CB5DC2617C31900488F2F /* FieldTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425CB5DB2617C31900488F2F /* FieldTitle.swift */; };
+		425CB5E02617C35500488F2F /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425CB5DF2617C35500488F2F /* Field.swift */; };
+		425CB5E52617C3EE00488F2F /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425CB5E42617C3EE00488F2F /* View.swift */; };
 		42684A202605392A001C1247 /* AppakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42684A1F2605392A001C1247 /* AppakApp.swift */; };
 		42684A242605392B001C1247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42684A232605392B001C1247 /* Assets.xcassets */; };
 		42684A272605392B001C1247 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42684A262605392B001C1247 /* Preview Assets.xcassets */; };
@@ -19,6 +22,7 @@
 		427AEA7E260FD5C200971BBC /* PhoneAppsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427AEA7D260FD5C200971BBC /* PhoneAppsViewModel.swift */; };
 		429A9E272607CB9300486793 /* PhoneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429A9E262607CB9300486793 /* PhoneApp.swift */; };
 		42E6969A261605370029AAB9 /* PhoneAppDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E69699261605370029AAB9 /* PhoneAppDetailView.swift */; };
+		42FC432C2618F4D200350281 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FC432B2618F4D200350281 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,9 @@
 		421EB90826128F7F00F59C9D /* PhoneApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhoneApp.xcdatamodel; sourceTree = "<group>"; };
 		4248EF902613DA6100A46E3C /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		425CB5D62617AF5800488F2F /* PhoneAppCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAppCreateView.swift; sourceTree = "<group>"; };
+		425CB5DB2617C31900488F2F /* FieldTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTitle.swift; sourceTree = "<group>"; };
+		425CB5DF2617C35500488F2F /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		425CB5E42617C3EE00488F2F /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		42684A1C2605392A001C1247 /* Appak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42684A1F2605392A001C1247 /* AppakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppakApp.swift; sourceTree = "<group>"; };
 		42684A232605392B001C1247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +45,7 @@
 		427E11EA260D4B0700493CC4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		429A9E262607CB9300486793 /* PhoneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneApp.swift; sourceTree = "<group>"; };
 		42E69699261605370029AAB9 /* PhoneAppDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAppDetailView.swift; sourceTree = "<group>"; };
+		42FC432B2618F4D200350281 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +72,19 @@
 			children = (
 				426A42F5260783CB00C6B3C7 /* ListHeaderView.swift */,
 				42684A3B2605440C001C1247 /* PhoneAppCellView.swift */,
+				425CB5DF2617C35500488F2F /* Field.swift */,
+				425CB5DB2617C31900488F2F /* FieldTitle.swift */,
 			);
 			path = SharedViews;
+			sourceTree = "<group>";
+		};
+		425CB5E32617C3CF00488F2F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				425CB5E42617C3EE00488F2F /* View.swift */,
+				42FC432B2618F4D200350281 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		42684A132605392A001C1247 = {
@@ -95,6 +114,7 @@
 				4248EF8F2613DA5100A46E3C /* Persistence */,
 				42684A3026053D34001C1247 /* Views */,
 				425CB5D92617C12F00488F2F /* SharedViews */,
+				425CB5E32617C3CF00488F2F /* Extensions */,
 				42684A232605392B001C1247 /* Assets.xcassets */,
 				42684A282605392B001C1247 /* Info.plist */,
 				42684A252605392B001C1247 /* Preview Content */,
@@ -206,11 +226,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425CB5E52617C3EE00488F2F /* View.swift in Sources */,
 				42E6969A261605370029AAB9 /* PhoneAppDetailView.swift in Sources */,
 				421EB90926128F7F00F59C9D /* PhoneApp.xcdatamodeld in Sources */,
+				425CB5E02617C35500488F2F /* Field.swift in Sources */,
+				42FC432C2618F4D200350281 /* String.swift in Sources */,
 				42684A3826053D67001C1247 /* MainView.swift in Sources */,
 				42684A202605392A001C1247 /* AppakApp.swift in Sources */,
 				429A9E272607CB9300486793 /* PhoneApp.swift in Sources */,
+				425CB5DC2617C31900488F2F /* FieldTitle.swift in Sources */,
 				425CB5D72617AF5800488F2F /* PhoneAppCreateView.swift in Sources */,
 				42684A3C2605440C001C1247 /* PhoneAppCellView.swift in Sources */,
 				426A42F6260783CB00C6B3C7 /* ListHeaderView.swift in Sources */,

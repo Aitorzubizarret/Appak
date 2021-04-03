@@ -39,7 +39,8 @@ struct MainView: View {
                         Image(systemName: "plus")
                             .font(Font.system(size: 20, weight: Font.Weight.bold, design: Font.Design.default))
                     }.sheet(isPresented: $showingPhoneAppCreateView, content: {
-                        PhoneAppCreateView()
+                        PhoneAppCreateView(showingPhoneAppCreateView: self.$showingPhoneAppCreateView)
+                            .environmentObject(self.phoneAppsViewModel)
                     })
             )
         }

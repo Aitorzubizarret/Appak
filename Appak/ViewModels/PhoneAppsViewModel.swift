@@ -60,4 +60,24 @@ class PhoneAppsViewModel: ObservableObject {
             print("VM saveDemoPhoneApps error: \(error.localizedDescription)")
         }
     }
+    
+    ///
+    /// Create a new PhoneApp and save it in Core Data.
+    ///
+    func createNewPhoneApp(name: String, urlString: String) {
+        // Create new PhoneApp object.
+        let newPhoneApp: PhoneApp = PhoneApp(context: self.moc)
+        newPhoneApp.id = UUID()
+        newPhoneApp.icon = "applicationIcon"
+        newPhoneApp.name = name
+        newPhoneApp.urlString = urlString
+        
+        // Save the new PhoneApp in Core Data and update the PhoneApps property.
+        do {
+            try self.moc.save()
+            self.getPhoneApps()
+        } catch let error {
+            print("VM createNewPhoneApp error: \(error.localizedDescription)")
+        }
+    }
 }
