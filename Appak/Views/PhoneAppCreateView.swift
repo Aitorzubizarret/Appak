@@ -100,13 +100,13 @@ struct PhoneAppCreateView: View {
                             self.AppStoreURLChecked.toggle()
                         }
                     }) {
-                        Text("Check URL")
+                        BigButton(title: "Check URL")
                     }
                 } else {
                     Button(action: {
                         self.createPhoneAppSaveInViewModel()
                     }) {
-                        Text("Add App to Appak")
+                        BigButton(title: "Save App")
                     }
                 }
                 
