@@ -11,9 +11,10 @@ struct PhoneAppCreateView: View {
     
     // MARK: - Properties
     
-    @Binding var showingPhoneAppCreateView: Bool
     @EnvironmentObject var phoneAppsViewModel: PhoneAppsViewModel
+    @Binding var showingPhoneAppCreateView: Bool
     @State private var AppStoreURLChecked: Bool = false
+    @State private var AppStoreURLWrong: Bool = false
     @State private var fieldAppStoreURL: String = ""
     @State private var phoneAppName: String = ""
     @State private var phoneAppURL: String = ""
@@ -41,7 +42,8 @@ struct PhoneAppCreateView: View {
         // - https://apps.apple.com/es/app/id989804926
         //
         let urlParts = self.fieldAppStoreURL.components(separatedBy: "/")
-        guard urlParts[urlParts.count - 3] == "app",
+        guard urlParts.count > 5,
+              urlParts[urlParts.count - 3] == "app",
               urlParts[urlParts.count - 5] == "apps.apple.com" else { return response }
         
         self.getDataFromURL(url) { (success, iconURLString)  in
@@ -94,10 +96,19 @@ struct PhoneAppCreateView: View {
         NavigationView {
             ScrollView {
                 Field(title: "App Store URL", value: self.$fieldAppStoreURL, keyboardType: .URL)
+                
                 if !self.AppStoreURLChecked {
+                    if self.AppStoreURLWrong {
+                        Text("App Store URL is Wrong!")
+                            .font(Font.system(size: 14))
+                            .fontWeight(Font.Weight.medium)
+                            .padding()
+                    }
                     Button(action: {
                         if self.checkIntroducedAppStoreURL() {
                             self.AppStoreURLChecked.toggle()
+                        } else {
+                            self.AppStoreURLWrong.toggle()
                         }
                     }) {
                         BigButton(title: "Check URL")

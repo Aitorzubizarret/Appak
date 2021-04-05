@@ -22,7 +22,23 @@ struct BigButton: View {
     // MARK: - View
     
     var body: some View {
-        Text(self.title)
+        HStack {
+            Spacer()
+            Text(self.title)
+                .font(Font.system(size: 14))
+                .fontWeight(Font.Weight.medium)
+            Spacer()
+        }
+        .padding()
+        .background(Color.white)
+        .foregroundColor(Color.gray)
+        .font(.headline)
+        .cornerRadius(6)
+        .overlay(
+            RoundedRectangle(cornerRadius: 6)
+                .stroke(Color.gray, lineWidth: 2)
+        )
+        .padding(EdgeInsets(top: 10, leading: 24, bottom: 0, trailing: 24))
     }
 }
 
