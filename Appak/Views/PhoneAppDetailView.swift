@@ -13,8 +13,13 @@ struct PhoneAppDetailView: View {
     // MARK: - Properties
     
     @State private var showRecommended = false
+    var phoneApp: PhoneApp
     
     // MARK: - Methods
+    
+    init(phoneApp: PhoneApp) {
+        self.phoneApp = phoneApp
+    }
     
     // MARK: - View
     
@@ -27,7 +32,7 @@ struct PhoneAppDetailView: View {
                 SKOverlay.AppConfiguration(appIdentifier: "871799243", position: .bottom)
             }
             Button(action: {
-                if let url = URL(string: "https://apps.apple.com/es/app/bizkaibus/id871799243"),
+                if let url = URL(string: self.phoneApp.urlString),
                    UIApplication.shared.canOpenURL(url) {
                     UIApplication.shared.open(url, options: [:]) { (success) in
                         if success {
@@ -44,6 +49,12 @@ struct PhoneAppDetailView: View {
 
 struct PhoneAppDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PhoneAppDetailView()
+        let context = PersistenceController.shared.container.viewContext
+        let phoneApp: PhoneApp = PhoneApp(context: context)
+        phoneApp.name = "Demo"
+        phoneApp.icon = "applicationIcon"
+        phoneApp.urlString = ""
+        
+        return PhoneAppDetailView(phoneApp: phoneApp)
     }
 }

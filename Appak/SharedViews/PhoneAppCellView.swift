@@ -27,7 +27,7 @@ struct PhoneAppCellView: View {
     // MARK: - View
     
     var body: some View {
-        NavigationLink(destination: PhoneAppDetailView()) {
+        NavigationLink(destination: PhoneAppDetailView(phoneApp: self.phoneApp)) {
             VStack{
                 Image(self.phoneApp.icon)
                     .resizable()
