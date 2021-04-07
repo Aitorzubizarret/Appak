@@ -11,11 +11,6 @@ struct PhoneAppCellView: View {
     
     // MARK: - Properties
     
-    private var cellSize: CGSize {
-        let screenWidth: CGFloat = UIScreen.main.bounds.width - 40
-        let cellSize: CGSize = CGSize(width: screenWidth / 4, height: 110)
-        return cellSize
-    }
     var phoneApp: PhoneApp
     
     // MARK: - Methods
@@ -28,7 +23,7 @@ struct PhoneAppCellView: View {
     
     var body: some View {
         NavigationLink(destination: PhoneAppDetailView(phoneApp: self.phoneApp)) {
-            VStack{
+            HStack{
                 Image(self.phoneApp.icon)
                     .resizable()
                     .scaledToFit()
@@ -37,8 +32,8 @@ struct PhoneAppCellView: View {
                 Text(self.phoneApp.name)
                     .font(Font.system(size: 13, weight: .light, design: .default))
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 0))
+                Spacer()
             }
-            .frame(width: cellSize.width, height: cellSize.height, alignment: .center)
         }
     }
 }
