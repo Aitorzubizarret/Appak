@@ -29,11 +29,14 @@ struct PhoneAppCellView: View {
                     .scaledToFit()
                     .frame(width: 80, height: 80, alignment: .center)
                     .cornerRadius(14)
-                Text(self.phoneApp.name)
-                    .font(Font.system(size: 13, weight: .light, design: .default))
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 1, trailing: 0))
+                Text(self.phoneApp.name.capitalized)
+                    .font(Font.system(size: 14))
+                    .fontWeight(Font.Weight.medium)
+                    .foregroundColor(Color.black)
+                    .padding(EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 0))
                 Spacer()
             }
+            .padding(EdgeInsets(top: 6, leading: 12, bottom: 0, trailing: 0))
         }
     }
 }
