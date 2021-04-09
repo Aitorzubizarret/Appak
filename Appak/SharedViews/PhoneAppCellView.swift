@@ -11,6 +11,7 @@ struct PhoneAppCellView: View {
     
     // MARK: - Properties
     
+    @EnvironmentObject var phoneAppsViewModel: PhoneAppsViewModel
     var phoneApp: PhoneApp
     
     // MARK: - Methods
@@ -22,7 +23,7 @@ struct PhoneAppCellView: View {
     // MARK: - View
     
     var body: some View {
-        NavigationLink(destination: PhoneAppDetailView(phoneApp: self.phoneApp)) {
+        NavigationLink(destination: PhoneAppDetailView(phoneApp: self.phoneApp).environmentObject(self.phoneAppsViewModel)) {
             HStack{
                 Image(self.phoneApp.icon)
                     .resizable()

@@ -80,4 +80,19 @@ class PhoneAppsViewModel: ObservableObject {
             print("VM createNewPhoneApp error: \(error.localizedDescription)")
         }
     }
+    
+    ///
+    /// Delete the received PhoneApp from Core Data.
+    /// - Parameter phoneApp: The PhoneApp object.
+    ///
+    public func deletePhoneApp(phoneApp: PhoneApp) {
+        self.moc.delete(phoneApp)
+        
+        do {
+            try self.moc.save()
+            self.getPhoneApps()
+        } catch let error {
+            print("Error deleting the PhoneApp: \(error)")
+        }
+    }
 }

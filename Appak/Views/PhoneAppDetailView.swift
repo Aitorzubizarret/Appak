@@ -12,6 +12,7 @@ struct PhoneAppDetailView: View {
     
     // MARK: - Properties
     
+    @EnvironmentObject var phoneAppsViewModel: PhoneAppsViewModel
     @State private var showRecommended = false
     var phoneApp: PhoneApp
     
@@ -42,6 +43,11 @@ struct PhoneAppDetailView: View {
                 }
             }) {
                 Text("Go to App Store")
+            }
+            Button(action: {
+                self.phoneAppsViewModel.deletePhoneApp(phoneApp: self.phoneApp)
+            }) {
+                Text("Delete this App")
             }
         }
     }

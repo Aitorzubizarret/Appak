@@ -26,7 +26,7 @@ struct MainView: View {
             ScrollView {
                 ListHeaderView()
                 ForEach(self.phoneAppsViewModel.phoneApps, id:\.id) { phoneApp in
-                    PhoneAppCellView(phoneApp: phoneApp)
+                    PhoneAppCellView(phoneApp: phoneApp).environmentObject(self.phoneAppsViewModel)
                 }
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
