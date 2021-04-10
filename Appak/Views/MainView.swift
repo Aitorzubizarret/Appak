@@ -25,8 +25,13 @@ struct MainView: View {
         NavigationView {
             ScrollView {
                 ListHeaderView(title: "Favourite Apps")
-                ForEach(self.phoneAppsViewModel.phoneApps, id:\.id) { phoneApp in
-                    PhoneAppCellView(phoneApp: phoneApp).environmentObject(self.phoneAppsViewModel)
+                if self.phoneAppsViewModel.phoneApps.count == 0 {
+                    Spacer()
+                    Text("No Favourite Apps yet")
+                } else {
+                    ForEach(self.phoneAppsViewModel.phoneApps, id:\.id) { phoneApp in
+                        PhoneAppCellView(phoneApp: phoneApp).environmentObject(self.phoneAppsViewModel)
+                    }
                 }
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
