@@ -43,6 +43,8 @@ struct PhoneAppCellView: View {
 }
 
 struct PhoneAppCellView_Previews: PreviewProvider {
+    static let phoneAppsViewModel = PhoneAppsViewModel()
+    
     static var previews: some View {
         let context = PersistenceController.shared.container.viewContext
         let phoneApp: PhoneApp = PhoneApp(context: context)
@@ -50,7 +52,7 @@ struct PhoneAppCellView_Previews: PreviewProvider {
         phoneApp.icon = "applicationIcon"
         phoneApp.urlString = ""
         
-        return PhoneAppCellView(phoneApp: phoneApp)
+        return PhoneAppCellView(phoneApp: phoneApp).environmentObject(phoneAppsViewModel)
             .previewLayout(.sizeThatFits)
     }
 }

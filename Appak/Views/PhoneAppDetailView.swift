@@ -56,6 +56,8 @@ struct PhoneAppDetailView: View {
 }
 
 struct PhoneAppDetailView_Previews: PreviewProvider {
+    static let phoneAppsViewModel = PhoneAppsViewModel()
+    
     static var previews: some View {
         let context = PersistenceController.shared.container.viewContext
         let phoneApp: PhoneApp = PhoneApp(context: context)
@@ -63,6 +65,6 @@ struct PhoneAppDetailView_Previews: PreviewProvider {
         phoneApp.icon = "applicationIcon"
         phoneApp.urlString = ""
         
-        return PhoneAppDetailView(phoneApp: phoneApp)
+        return PhoneAppDetailView(phoneApp: phoneApp).environmentObject(phoneAppsViewModel)
     }
 }

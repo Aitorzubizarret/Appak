@@ -128,7 +128,9 @@ struct PhoneAppCreateView: View {
 }
 
 struct PhoneAppCreateView_Previews: PreviewProvider {
+    static let phoneAppsViewModel = PhoneAppsViewModel()
+    
     static var previews: some View {
-        PhoneAppCreateView(showingPhoneAppCreateView: .constant(false)).environmentObject(PhoneAppsViewModel())
+        PhoneAppCreateView(showingPhoneAppCreateView: .constant(false)).environmentObject(phoneAppsViewModel)
     }
 }
