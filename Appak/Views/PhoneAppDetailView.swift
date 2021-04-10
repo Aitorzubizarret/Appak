@@ -26,8 +26,10 @@ struct PhoneAppDetailView: View {
     
     var body: some View {
         VStack {
-            Button("Show App Store Banner") {
+            Button(action: {
                 showRecommended.toggle()
+            }) {
+                BigButton(title: "Show App Store Banner")
             }
             .appStoreOverlay(isPresented: $showRecommended) {
                 SKOverlay.AppConfiguration(appIdentifier: "871799243", position: .bottom)
@@ -42,12 +44,12 @@ struct PhoneAppDetailView: View {
                     }
                 }
             }) {
-                Text("Go to App Store")
+                BigButton(title: "Go to App Store")
             }
             Button(action: {
                 self.phoneAppsViewModel.deletePhoneApp(phoneApp: self.phoneApp)
             }) {
-                Text("Delete this App")
+                BigButton(title: "Delete App")
             }
         }
     }
