@@ -24,7 +24,7 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ListHeaderView()
+                ListHeaderView(title: "Favourite Apps")
                 ForEach(self.phoneAppsViewModel.phoneApps, id:\.id) { phoneApp in
                     PhoneAppCellView(phoneApp: phoneApp).environmentObject(self.phoneAppsViewModel)
                 }

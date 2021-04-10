@@ -11,13 +11,19 @@ struct ListHeaderView: View {
     
     // MARK: - Properties
     
+    var title: String
+    
     // MARK: - Methods
+    
+    init(title: String) {
+        self.title = title
+    }
     
     // MARK: - View
     
     var body: some View {
         HStack {
-            Text("Favourite Apps")
+            Text(self.title.capitalized)
                 .font(Font.system(size: 20, weight: .bold, design: .default))
             Spacer()
             //Text("See all")
@@ -29,7 +35,7 @@ struct ListHeaderView: View {
 
 struct ListHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ListHeaderView()
+        ListHeaderView(title: "Title")
             .previewLayout(.sizeThatFits)
     }
 }
